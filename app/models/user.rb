@@ -7,7 +7,9 @@ class User < ApplicationRecord
   has_many :books
   has_one_attached :profile_image
 
-  validates :name, length: { minimum: 2, maximum: 20 }, uniqueness: true
+  validates :name, length: { minimum: 2, maximum: 20 }, uniqueness: true,presence:true
+  validates :introduction, presence:true
+
 
 
 
