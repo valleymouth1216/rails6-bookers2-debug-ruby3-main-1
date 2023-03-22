@@ -2,8 +2,8 @@ class BooksController < ApplicationController
   before_action :authenticate_user!
 
   def show
-    @book = Book.find(params[:id])
-
+    @book_show = Book.find(params[:id])
+    @book = Book.new
   end
 
   def index
